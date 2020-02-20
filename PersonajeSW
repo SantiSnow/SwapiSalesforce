@@ -1,0 +1,13 @@
+public Class PersonajeSW{
+
+    public String name;
+    public String height;
+    public String gender;
+    public String hairColor;
+    public String eyeColor;
+    public String url;
+    public String planet;
+    public String numberChar;
+    
+
+}

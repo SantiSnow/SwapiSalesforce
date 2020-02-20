@@ -1,0 +1,26 @@
+public class PersonajeController {
+	    
+    public static HttpResponse llamadaGet(){
+        
+    	List<PersonajeSW> personajes;    
+        
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        HttpResponse response = new HttpResponse();
+        
+        request.setEndpoint('https://swapi.co/api/people/1/');
+        request.setMethod('GET');
+    	request.setHeader('Content-Type', 'application/json');
+		request.setHeader('Accept','application/json');
+        
+        response = http.send(request);
+        
+        if(response.getStatusCode() == 200 && response.getBody() != null){
+            system.debug('El cuerpo de la respuesta es: '+response.getBody());
+            personajes=(List<PersonajeSW>)JSON.deserialize(response.getBody(), List<PersonajeSW>.class);
+        }
+        
+        return response;
+    }
+    
+}

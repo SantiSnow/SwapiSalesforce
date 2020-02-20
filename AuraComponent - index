@@ -1,0 +1,76 @@
+<aura:component >
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Applicacion SalesForce Api Star Wars" />
+        <meta name="keywords" content="Applicacion SalesForce Api Star Wars" />
+        <meta name="author" content="Santiago Aguirre Perez" />
+        <title>Applicacion SalesForce Api Star Wars</title> 
+    	<!-- uso de bootstrap y jquery para la aplicacion  -->
+    	<ltng:require styles="{! $Resource.bootstrap441 + '/bootstrap-4.4.1-dist/css/bootstrap.min.css'}" 
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.bootstrap441 + '/bootstrap-4.4.1-dist/js/bootstrap.min.js')
+      }" />
+    
+    
+    </head>
+    <body>
+	<header id="main-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h1 id="main-logo" style="color:#7575ff">Aplicacion Star Wars</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+<section id="cuerpo">
+<div class="container">
+	<br />
+	<br />
+	<br />
+	<div class="col-12">
+		<div class="page-header">
+    		<h1 id="titulo-curso">Buscar Contacto:</h1>
+		</div>
+	</div>
+	<br />
+</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-5">
+				<div class="form-group">
+                    <input type="number" class="form-control" id="input_2" placeholder="Numero Personaje" required="required"></input>
+					<br />
+					<br />
+                    <button type="button" class="btn btn-primary">Buscar</button>
+                    <br />
+                    <br />
+                    <lightning:button label="Salir de la aplicacion" type="button" class="btn btn-primary"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<br />
+	</div>
+</section>
+<footer id="main-footer">
+	<div class="container">
+		<br />
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="container">
+				</div>
+				<br />
+				<p>Realizado Para Xappia - SalesForce 2020</p>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</aura:component>
